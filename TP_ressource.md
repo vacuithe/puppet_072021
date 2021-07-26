@@ -75,3 +75,9 @@ Nous allons utiliser la commande puppet resource afin de comprendre la correspon
     ```bash
     $ puppet apply /vagrant/manage_user.pp
     ```
+
+3. Modifier le manifest pour ajouter l'attribut group au user test et réappliquer le manifest
+
+   ```puppet
+   groups => 'formation'
+   ```
