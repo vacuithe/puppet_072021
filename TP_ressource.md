@@ -81,3 +81,21 @@ Nous allons utiliser la commande puppet resource afin de comprendre la correspon
    ```puppet
    groups => 'formation'
    ```
+
+4. Ajouter à la suite du code (après la resource user), une resource de type group pour demander la présence du group **formation** sur la machine, et réappliquer le manifest
+
+    > https://puppet.com/docs/puppet/7/types/group.html
+
+    ```puppet
+      user { 'test':
+        ensure     => 'present',
+        comment    => 'user de test manage par puppet',
+        shell      => '/bin/bash',
+        managehome => 'true',
+        groups     => 'formation',
+      }
+      
+      group { 'formation':
+        ensure => 'present',
+      }
+      ```
