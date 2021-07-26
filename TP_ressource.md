@@ -68,7 +68,7 @@ Nous allons utiliser la commande puppet resource afin de comprendre la correspon
    - Shell : /bin/bash
    - Gecos (commentaire) : "user de test manage par puppet"
 
-   > On peut regarde la doc pour la ressource user : https://puppet.com/docs/puppet/6/types/user.html
+   > On peut regarde la doc pour la ressource user : https://puppet.com/docs/puppet/7/types/user.html
 
 2. Appliquer le manifest localement (stadalone)
 
