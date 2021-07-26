@@ -64,3 +64,54 @@
     Couldn't fetch certificate from CA server; you might still need to sign this agent's certificate (cli01.formation.lan).
     Exiting now because the waitforcert setting is set to 0.
     ```
+
+## Concept ressource :
+
+### Lister les ressources dispo :
+
+    ```bash
+    $ puppet describe -l
+    ```
+
+
+### Transposer un objet existant en langage de déclaration puppet
+
+- On utilise la commande puppet (dispo avec un simple agent)
+
+    - Resource de type fichier :
+    ```bash
+    $ puppet resource file /etc/passwd
+    ```
+    ```puppet
+    file { '/etc/passwd':
+      ensure   => 'file',
+      content  => '{sha256}4513268fb7fd97059b77940ee249514e280e435bb9a3650759a2f8729662c7b5',
+      ctime    => '2021-07-26 09:15:08 +0000',
+      group    => 0,
+      mode     => '0644',
+      mtime    => '2021-07-26 09:15:08 +0000',
+      owner    => 0,
+      provider => 'posix',
+      type     => 'file',
+    }
+    ```
+
+    - ressource de type user :
+    ```bash
+    $ puppet resource user vagrant
+    ```
+    ```puppet
+    user { 'vagrant':
+      ensure             => 'present',
+      comment            => ',,,',
+      gid                => 1000,
+      home               => '/home/vagrant',
+      password           => '$6$DvLErCjtTEd99/S2$jwCKZY8SIxof4A17ajy.K0dqR/      HGGqyKtgdRE1rGrsoc3SQNrO7OZXAeIXepqElDKVM8xfky4egOU8WilwcXF0',
+      password_max_age   => 99999,
+      password_min_age   => 0,
+      password_warn_days => 7,
+      provider           => 'useradd',
+      shell              => '/bin/bash',
+      uid                => 1000,
+    }
+    ```
