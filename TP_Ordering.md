@@ -15,7 +15,7 @@ Dans ce travail pratique nous allons:
   - Ressource **package** : https://puppet.com/docs/puppet/7/types/package.html
 
   - Ressource **service** : https://puppet.com/docs/puppet/7/types/service.html
-  Ressource **augeas** : https://forge.puppet.com/modules/puppetlabs/augeas_core
+  - Ressource **augeas** : https://forge.puppet.com/modules/puppetlabs/augeas_core
 
   - relationships : https://puppet.com/docs/puppet/7/lang_relationships.html
 
