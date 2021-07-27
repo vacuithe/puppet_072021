@@ -1,5 +1,6 @@
 # Manifest demo variables, facts
-
+# Class : demo vars
+class demo_vars {
 # Variable type int :
 $intvar = 2021
 
@@ -34,4 +35,15 @@ notify {'call facts':
   #message  => $::osfamily => obsolete
 }
 
+# Hiera : utiliser une variable déclarée dans la structure HIERA
 
+notify { 'utilisation var hiera':
+  message => lookup('mavarhiera', String),
+}
+
+# Utilisation tableau hiera avec parcours des éléments
+lookup('user_list', Array[String]).each | String $username | {
+  notify { $username:}
+}
+
+}

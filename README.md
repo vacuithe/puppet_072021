@@ -128,21 +128,21 @@
 
 ### Variables et facts
 
-> https://puppet.com/docs/puppet/7/lang_variables.html
+  > https://puppet.com/docs/puppet/7/lang_variables.html
 
-> https://puppet.com/docs/puppet/7/lang_facts_accessing.html
+  > https://puppet.com/docs/puppet/7/lang_facts_accessing.html
 
 
 ### Conditionnals
 
-> https://puppet.com/docs/puppet/7/lang_conditional.html
+  > https://puppet.com/docs/puppet/7/lang_conditional.html
 
-## Hiera - centralisation des variables
+### Hiera - centralisation des variables
 
-> https://puppet.com/docs/puppet/7/hiera_intro.html
+  > https://puppet.com/docs/puppet/7/hiera_intro.html
 
-> https://puppet.com/docs/puppet/7/hiera.html
+  > https://puppet.com/docs/puppet/7/hiera.html
 
-> https://puppet.com/docs/puppet/6/hiera_quick.html
+  > https://puppet.com/docs/puppet/6/hiera_quick.html
 
-> https://puppet.com/docs/puppet/6/hiera_config_yaml_5.html
+  > https://puppet.com/docs/puppet/6/hiera_config_yaml_5.html
