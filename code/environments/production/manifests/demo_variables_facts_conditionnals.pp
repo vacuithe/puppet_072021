@@ -15,7 +15,7 @@ $apache_package = $facts['os']['family'] ? {
 }
 
 # Ressource notify pour debuger
-if $required {
+if $required { # Orienter le code ou la valeur des variable avec des conditions
   notify { 'Debug var package' :
     message => "Nom du package apache : ${apache_package}",
   }
@@ -33,9 +33,5 @@ notify {'call facts':
   message => "Famille os : ${facts['os']['family']}"
   #message  => $::osfamily => obsolete
 }
-
-# Orienter le code ou la valeur des variable avec des conditions, des cas
-
-
 
 
