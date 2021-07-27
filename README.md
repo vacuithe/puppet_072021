@@ -126,8 +126,13 @@
     - Il est important de maîtriser cet ordonnancement :
         > https://puppet.com/docs/puppet/7/lang_relationships.html
 
-## Variables et facts
+### Variables et facts
 
 > https://puppet.com/docs/puppet/7/lang_variables.html
 
 > https://puppet.com/docs/puppet/7/lang_facts_accessing.html
+
+
+### Conditionnals
+
+> https://puppet.com/docs/puppet/7/lang_conditional.html

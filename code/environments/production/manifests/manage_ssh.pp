@@ -2,14 +2,19 @@
 package { 'openssh-server':
   ensure => 'installed',
 }
-
-file_line { 'conf sshd':
-  ensure  => present,
-  path    => '/etc/ssh/sshd_config',
-  line    => 'PermitRootLogin no',
-  match   => '^PermitRootLogin .*',
-  notify  => Service['gestion service ssh'],
-  require => Package['openssh-server'],
+-> file_line { 'conf sshd':
+    ensure => present,
+    path   => '/etc/ssh/sshd_config',
+    line   => 'PermitRootLogin no',
+    match  => '^PermitRootLogin .*',
+    #notify  => Service['gestion service ssh'],
+    #require => Package['openssh-server'],
+}
+~> service { 'gestion service ssh':
+    ensure => 'running',
+    name   => 'sshd',
+    enable => 'true',
+    #require => Package['openssh-server'],
 }
 
 #augeas { 'conf sshd':
@@ -20,10 +25,4 @@ file_line { 'conf sshd':
 #    notify  => Service['gestion service ssh'],
 #    require => Package['openssh-server'],
 #}
-
-service { 'gestion service ssh':
-  ensure  => 'running',
-  name    => 'sshd',
-  enable  => 'true',
-  require => Package['openssh-server'],
-}
+#Package['openssh-server'] -> File_line['conf sshd'] ~> Service['gestion service ssh']

@@ -3,7 +3,7 @@
 # Définition de la resource de type user
 
 user { 'creation user test':
-  ensure  => 'present',
+  ensure  => 'absent',
   name    => 'test',
   shell   => '/bin/bash',
   comment => 'User de test managé par puppet',
@@ -12,7 +12,7 @@ user { 'creation user test':
 
 # La resource groupe sera déclarée avant la ressource user (automatic ordering)
 group { 'creation du groupe formation':
-  ensure => 'present',
+  ensure => 'absent',
   name   => 'formation',
   # Ordering manuel
   before => User['creation user test'],
