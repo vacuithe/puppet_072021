@@ -1,6 +1,7 @@
 # TP vars, facts, conditionnals
 # Class : manage_ntp
 class manage_ntp {
+
 # Variable nom package ntp
 $ntp_package = $facts['os']['family'] ? {
   'Debian' => 'ntp',
