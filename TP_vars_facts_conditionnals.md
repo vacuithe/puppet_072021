@@ -20,6 +20,8 @@ Dans ce travail pratique nous allons:
 
 **Exercice**
 
+**Dans un nouveau manifest manage_ntp.pp :**
+
 1. Déclarer une variable qui s'adapte en fonction de l'os pour le nom du package :
     - debian : ntp
     - redhat : chrony
