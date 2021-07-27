@@ -18,4 +18,7 @@ node 'cli01.formation.lan' {
   class { 'class_param':
     mon_parametre => 'custom param00'
   }
+  class { 'manage_tz':
+    timezone => 'Europe/Madrid'
+  }
 }
