@@ -4,14 +4,21 @@
 $intvar = 2021
 
 # Variable bouleen
-$required = true
+$required = false
 
 # Variable string
-$apache_package = 'httpd'
+#$apache_package = 'httpd'
+# Selector 
+$apache_package = $facts['os']['family'] ? {
+  'RedHat'          => 'httpd',
+  /(Debian|Ubuntu)/ => 'apache2',
+}
 
 # Ressource notify pour debuger
-notify { 'Debug var package' :
-  message => "Nom du package apache : ${apache_package}",
+if $required {
+  notify { 'Debug var package' :
+    message => "Nom du package apache : ${apache_package}",
+  }
 }
 
 # Fonction notice, alert => genere une output logs uniquement sur le puppetmaster
@@ -26,5 +33,9 @@ notify {'call facts':
   message => "Famille os : ${facts['os']['family']}"
   #message  => $::osfamily => obsolete
 }
+
+# Orienter le code ou la valeur des variable avec des conditions, des cas
+
+
 
 
