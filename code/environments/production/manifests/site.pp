@@ -12,20 +12,13 @@ node default {
 }
 
 node 'cli01.formation.lan' {
-  #include demo_vars
-  #include manage_user
-  #include manage_ntp
-  #include manage_ssh
-  #include class_param
   class { 'class_param':
     mon_parametre => 'custom param00'
   }
   class { 'manage_tz':
     timezone => 'Europe/Madrid'
   }
-
   demo_define {'Instance bdd01':}
-
   demo_define {'Instance bdd02':}
-
+  include system
 }

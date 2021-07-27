@@ -161,3 +161,12 @@
 
 - Pouvoir réutiliser du code (style classe) plusieurs fois pour le même catalogue :
   > https://puppet.com/docs/puppet/7/lang_defined_types.html
+
+
+### Modules
+
+> https://puppet.com/docs/puppet/7/modules_fundamentals.html
+
+- Dossier avec des classes bien rangées (/!\ le nom des classes doivent avoir le meme nom que le fichier .pp qui l'acceuille)
+- Apporte le concept de serveur de fichiers
+- Un module est autonome et permet l'installation d'une brique technique (serveur apache, serveur bdd, socle technique)
