@@ -146,3 +146,18 @@
   > https://puppet.com/docs/puppet/6/hiera_quick.html
 
   > https://puppet.com/docs/puppet/6/hiera_config_yaml_5.html
+
+### Classes
+
+- Regroupement de ressource
+- Permet de diviser le code
+    - Définition (écriture, mise à dispo)
+    - Déclaration : mise au catalogue (include)
+- Classe paramétrable : permet de changement le comportement lors de la déclaration
+
+> https://puppet.com/docs/puppet/7/lang_classes.html
+
+### Define resource type
+
+- Pouvoir réutiliser du code (style classe) plusieurs fois pour le même catalogue :
+  > https://puppet.com/docs/puppet/7/lang_defined_types.html
