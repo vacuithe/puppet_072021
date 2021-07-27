@@ -1,6 +1,6 @@
 # TP vars, facts, conditionnals
 # Class : manage_ntp
-class manage_ntp {
+class system::manage_ntp {
 
 # Variable nom package ntp
 $ntp_package = $facts['os']['family'] ? {

@@ -1,6 +1,6 @@
 # Manifest pour déclaration de ressource
 # Class :manage_user
-class manage_user {
+class system::manage_user {
 # Définition de la resource de type user
 # Modification du code pour utilisation d'une variable hiera et parcours de la liste
 lookup('user_list', Array[String]).each | String $username | {

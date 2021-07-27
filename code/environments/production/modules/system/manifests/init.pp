@@ -6,4 +6,5 @@
 #   include system
 class system {
   include system::child_class
+  include system::manage_ntp
 }
