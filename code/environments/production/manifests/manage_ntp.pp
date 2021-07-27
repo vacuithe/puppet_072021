@@ -6,24 +6,18 @@ $ntp_package = $facts['os']['family'] ? {
   'RedHat' => 'chrony',
 }
 
-$ntp_service = $facts['os']['family'] ? {
-  'Debian' => 'ntp',
-  'RedHat' => 'chronyd',
-}
-
-$ntp_config_file = $facts['os']['family'] ? {
-  'Debian' => '/etc/ntp.conf',
-  'RedHat' => '/etc/chrony.conf',
-}
-
 case $facts['os']['family'] {
   'Debian': {
     $ntp_line = 'logfile /var/log/ntpd3.log'
     $ntp_line_match = '^logfile'
+    $ntp_service = 'ntp'
+    $ntp_config_file = '/etc/ntp.conf'
   }
   'RedHat': {
     $ntp_line = 'logdir /var/log/'
     $ntp_line_match = '^logdir'
+    $ntp_service = 'chronyd'
+    $ntp_config_file = '/etc/chrony.conf'
   }
 }
 
