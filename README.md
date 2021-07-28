@@ -190,3 +190,13 @@ https://puppet.com/docs/puppet/7/lang_template_epp.html#lang_template_epp
 ### Iteration et loop 
 
 > https://puppet.com/docs/puppet/7/lang_iteration.html
+
+
+### Fonction create_ressource sur hash
+
+> https://puppet.com/docs/puppet/7/function.html#create-resources
+
+
+### Methode ROLES et PROFILES
+
+> https://puppet.com/docs/pe/2019.8/osp/the_roles_and_profiles_method.html
