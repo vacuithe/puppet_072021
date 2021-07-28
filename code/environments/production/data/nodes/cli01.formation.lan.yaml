@@ -3,3 +3,6 @@ user_list:
   - dev01
   - deploy01
 #system::manage_tz::timezone: 'Europe/Berlin'
+
+classe:
+  - role::websrv

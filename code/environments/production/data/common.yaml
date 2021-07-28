@@ -17,3 +17,6 @@ system::manage_user::user_list_default:
 
 test::my_hiera: 'coucou'
 #system::manage_tz::timezone: 'Europe/London'
+
+classes:
+  - role::base
