@@ -17,6 +17,7 @@ node 'cli01.formation.lan' {
   demo_define {'Instance bdd01':}
   demo_define {'Instance bdd02':}
   include system
+  include apache
 }
 
 node 'cli02.formation.lan' {

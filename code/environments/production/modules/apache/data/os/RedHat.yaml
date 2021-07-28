@@ -1,2 +1,3 @@
 apache::install::apache_package: 'httpd'
 apache::install::apache_service: 'httpd'
+apache::config::apache_index_path: '/usr/share/testpage/index.html'
