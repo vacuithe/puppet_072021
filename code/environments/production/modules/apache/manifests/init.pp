@@ -4,7 +4,12 @@
 #
 # @example
 #   include apache
-class apache {
+class apache (
+  $config_apache = true,
+)
+{
   include apache::install
-  include apache::config
+  if $config_apache {
+    include apache::config
+  }
 }
