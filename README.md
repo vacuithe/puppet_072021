@@ -132,6 +132,28 @@
 
   > https://puppet.com/docs/puppet/7/lang_facts_accessing.html
 
+  - Custom facts
+
+    > https://puppet.com/docs/puppet/7/custom_facts.html
+
+    - Simplement on peut ajouter des fichiers yaml ou scripts qui seront lu ou exécuter pendant la collecte des facts:
+
+        ```bash
+        root@cli03:/opt/puppetlabs/facter/facts.d# ls -l
+        total 12
+        -rw-r--r-- 1 root root 29 Jul 28 15:29 facts.yaml
+        -rw-r--r-- 1 root root 12 Jul 28 15:33 plouf.yaml
+        -rwxr-xr-x 1 root root 62 Jul 28 15:35 script.sh
+        ```
+
+        ```bash
+        #!/bin/bash
+        env=$(hostname -d | cut -c 1-9)
+        # Pour generer le facts il 
+        echo "env=$env"
+        ```
+
+    - ```puppet facts``` pour les lister
 
 ### Conditionnals
 
