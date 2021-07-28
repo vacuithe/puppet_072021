@@ -20,6 +20,8 @@ node 'cli01.formation.lan' {
 }
 
 node 'cli02.formation.lan' {
+  include stdlib
   include test
   include system
+  include apache
 }

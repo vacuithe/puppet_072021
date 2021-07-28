@@ -1,0 +1,2 @@
+apache::install::apache_package: 'apache2'
+apache::install::apache_service: 'apache2'

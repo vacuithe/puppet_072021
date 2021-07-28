@@ -5,4 +5,6 @@
 # @example
 #   include apache::config
 class apache::config {
+
+  # Pousser un fichier dynamic (template)
 }

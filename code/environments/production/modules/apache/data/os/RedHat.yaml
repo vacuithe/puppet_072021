@@ -1,0 +1,2 @@
+apache::install::apache_package: 'httpd'
+apache::install::apache_service: 'httpd'
