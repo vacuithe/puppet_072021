@@ -1,0 +1,24 @@
+# Fichier manage par Puppet
+# it@dawan.fr
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= $apache::config::index_title %> </title>
+</head>
+<body>
+    <h1> OS : <%= $facts['os']['family'] %> </h1>
+    <h2> <%= $apache::config::body_title %> </h2>
+    
+    <% $facts['networking']['interfaces'].each |String $interface, Hash $attrs| { -%>
+    interface <%= $interface %>;
+    <% } -%>
+
+    <% if $apache::config_apache { -%>
+    La config a bien ete demandée
+    <% } -%>
+</body>
+</html>

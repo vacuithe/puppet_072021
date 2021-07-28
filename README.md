@@ -169,4 +169,24 @@
 
 - Dossier avec des classes bien rangées (/!\ le nom des classes doivent avoir le meme nom que le fichier .pp qui l'acceuille)
 - Apporte le concept de serveur de fichiers
-- Un module est autonome et permet l'installation d'une brique technique (serveur apache, serveur bdd, socle technique)
+- Un module est autonome (un dépot) et permet l'installation d'une brique technique (serveur apache, serveur bdd, socle technique)
+- Un module a des variables par défaut (hiera interne au module)
+- Si on souhaite changer le comportement du module pour notre besoin, on SURCHARGE les variables dans notre HIERA d'environnement (externe au module)
+
+
+### Templates
+
+> https://puppet.com/docs/puppet/7/lang_template.html
+
+- 2 type : ERB et EPP
+
+  > https://puppet.com/docs/puppet/7/lang_template_epp.html#lang_template_epp
+  
+  > https://puppet.com/docs/puppet/7/lang_template_erb.html#lang_template_erb
+
+https://puppet.com/docs/puppet/7/lang_template_epp.html#lang_template_epp
+
+
+### Iteration et loop 
+
+> https://puppet.com/docs/puppet/7/lang_iteration.html

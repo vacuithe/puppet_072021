@@ -1,1 +1,3 @@
---- {}
+--- 
+apache::config::index_title: 'Site template puppet'
+apache::config::body_title: 'Coucou depuis module apache et valeurs par defaut de ses data hiera'

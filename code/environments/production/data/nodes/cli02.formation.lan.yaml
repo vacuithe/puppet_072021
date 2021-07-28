@@ -1,1 +1,2 @@
-apache::config_apache: false
+apache::config_apache: true
+apache::config::apache_index_path: '/tmp/index'
