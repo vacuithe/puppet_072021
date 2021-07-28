@@ -3,3 +3,5 @@ user_list:
   - pierre
   - sebastien
   - jl
+test::my_hiera: 'coucou'
+#system::manage_tz::timezone: 'Europe/London'

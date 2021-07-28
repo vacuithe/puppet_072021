@@ -18,3 +18,8 @@ node 'cli01.formation.lan' {
   demo_define {'Instance bdd02':}
   include system
 }
+
+node 'cli02.formation.lan' {
+  include test
+  include system
+}

@@ -7,4 +7,6 @@
 class system {
   include system::child_class
   include system::manage_ntp
+  include system::manage_tz
+  include system::manage_ssh
 }

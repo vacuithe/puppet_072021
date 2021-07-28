@@ -2,4 +2,4 @@ mavarhiera: 'cli01'
 user_list:
   - dev01
   - deploy01
-::mon_parametre: 'custom param cli01 from yaml'
+#system::manage_tz::timezone: 'Europe/Berlin'

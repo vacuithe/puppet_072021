@@ -1,11 +1,10 @@
 {
-  "name": "formation-system",
+  "name": "formation-apache",
   "version": "0.1.0",
   "author": "pierre",
   "summary": "",
   "license": "Apache-2.0",
   "source": "",
-  "data_provider": "hiera",
   "dependencies": [
 
   ],

@@ -1,5 +1,5 @@
 # Class: manage_ssh
-class manage_ssh {
+class system::manage_ssh {
 
 # Resource file_line => gestion de contenu de fichier
 package { 'openssh-server':

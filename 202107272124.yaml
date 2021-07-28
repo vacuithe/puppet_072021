@@ -1,0 +1,663 @@
+--- !ruby/object:Puppet::Transaction::Report
+host: cli01.formation.lan
+time: '2021-07-27T23:24:14.055383428+02:00'
+configuration_version: 1627421055
+transaction_uuid: 6e572b15-8df5-4471-ac99-c08ffeff21b7
+report_format: 12
+puppet_version: 7.9.0
+status: changed
+transaction_completed: true
+noop: false
+noop_pending: false
+environment: production
+logs:
+- level: notice
+  message: classe child du module system
+  source: Puppet
+  tags:
+  - notice
+  time: '2021-07-27T23:24:15.909887591+02:00'
+  file:
+  line:
+- level: notice
+  message: defined 'message' as 'classe child du module system'
+  source: "/Stage[main]/System::Child_class/Notify[classe child du module system]/message"
+  tags:
+  - notice
+  - notify
+  - class
+  - system::child_class
+  - system
+  - child_class
+  - node
+  - cli01.formation.lan
+  time: '2021-07-27T23:24:15.911762373+02:00'
+  file: "/etc/puppetlabs/code/environments/production/modules/system/manifests/child_class.pp"
+  line: 3
+- level: notice
+  message: Europe/Berlin
+  source: Puppet
+  tags:
+  - notice
+  time: '2021-07-27T23:24:16.203695046+02:00'
+  file:
+  line:
+- level: notice
+  message: defined 'message' as 'Europe/Berlin'
+  source: "/Stage[main]/System::Manage_tz/Notify[Europe/Berlin]/message"
+  tags:
+  - notice
+  - notify
+  - class
+  - system::manage_tz
+  - system
+  - manage_tz
+  - node
+  - cli01.formation.lan
+  time: '2021-07-27T23:24:16.205790835+02:00'
+  file: "/etc/puppetlabs/code/environments/production/modules/system/manifests/manage_tz.pp"
+  line: 10
+- level: notice
+  message: Instance bdd01
+  source: Puppet
+  tags:
+  - notice
+  time: '2021-07-27T23:24:16.206402527+02:00'
+  file:
+  line:
+- level: notice
+  message: defined 'message' as 'Instance bdd01'
+  source: "/Stage[main]/Main/Node[cli01.formation.lan]/Demo_define[Instance bdd01]/Notify[Instance\
+    \ bdd01]/message"
+  tags:
+  - notice
+  - notify
+  - demo_define
+  - node
+  - cli01.formation.lan
+  - class
+  time: '2021-07-27T23:24:16.208026341+02:00'
+  file: "/etc/puppetlabs/code/environments/production/manifests/demo_define_class.pp"
+  line: 4
+- level: notice
+  message: Instance bdd02
+  source: Puppet
+  tags:
+  - notice
+  time: '2021-07-27T23:24:16.208843917+02:00'
+  file:
+  line:
+- level: notice
+  message: defined 'message' as 'Instance bdd02'
+  source: "/Stage[main]/Main/Node[cli01.formation.lan]/Demo_define[Instance bdd02]/Notify[Instance\
+    \ bdd02]/message"
+  tags:
+  - notice
+  - notify
+  - demo_define
+  - node
+  - cli01.formation.lan
+  - class
+  time: '2021-07-27T23:24:16.209936481+02:00'
+  file: "/etc/puppetlabs/code/environments/production/manifests/demo_define_class.pp"
+  line: 4
+- level: notice
+  message: Applied catalog in 0.32 seconds
+  source: Puppet
+  tags:
+  - notice
+  time: '2021-07-27T23:24:16.220146396+02:00'
+  file:
+  line:
+metrics:
+  resources:
+    name: resources
+    label: Resources
+    values:
+    - - total
+      - Total
+      - 15
+    - - skipped
+      - Skipped
+      - 0
+    - - failed
+      - Failed
+      - 0
+    - - failed_to_restart
+      - Failed to restart
+      - 0
+    - - restarted
+      - Restarted
+      - 0
+    - - changed
+      - Changed
+      - 4
+    - - out_of_sync
+      - Out of sync
+      - 4
+    - - scheduled
+      - Scheduled
+      - 0
+    - - corrective_change
+      - Corrective change
+      - 0
+  time:
+    name: time
+    label: Time
+    values:
+    - - notify
+      - Notify
+      - 0.008270178
+    - - package
+      - Package
+      - 0.000283581
+    - - file_line
+      - File line
+      - 0.00041116
+    - - service
+      - Service
+      - 0.046521116
+    - - exec
+      - Exec
+      - 0.042160546
+    - - schedule
+      - Schedule
+      - 0.00033185299999999995
+    - - filebucket
+      - Filebucket
+      - 5.9677e-05
+    - - node_retrieval
+      - Node retrieval
+      - 0.15235841399999117
+    - - plugin_sync
+      - Plugin sync
+      - 0.5765951829998812
+    - - fact_generation
+      - Fact generation
+      - 0.4854647050001404
+    - - convert_catalog
+      - Convert catalog
+      - 0.03326021199973184
+    - - config_retrieval
+      - Config retrieval
+      - 0.5262155880000137
+    - - transaction_evaluation
+      - Transaction evaluation
+      - 0.3143684309998207
+    - - catalog_application
+      - Catalog application
+      - 0.321990218999872
+    - - total
+      - Total
+      - 2.165006564
+  changes:
+    name: changes
+    label: Changes
+    values:
+    - - total
+      - Total
+      - 4
+  events:
+    name: events
+    label: Events
+    values:
+    - - total
+      - Total
+      - 4
+    - - failure
+      - Failure
+      - 0
+    - - success
+      - Success
+      - 4
+resource_statuses:
+  Notify[classe child du module system]:
+    title: classe child du module system
+    file: "/etc/puppetlabs/code/environments/production/modules/system/manifests/child_class.pp"
+    line: 3
+    resource: Notify[classe child du module system]
+    resource_type: Notify
+    provider_used:
+    containment_path:
+    - Stage[main]
+    - System::Child_class
+    - Notify[classe child du module system]
+    evaluation_time: 0.002436909
+    tags:
+    - notify
+    - class
+    - system::child_class
+    - system
+    - child_class
+    - node
+    - cli01.formation.lan
+    time: '2021-07-27T23:24:15.909637121+02:00'
+    failed: false
+    failed_to_restart: false
+    changed: true
+    out_of_sync: true
+    skipped: false
+    change_count: 1
+    out_of_sync_count: 1
+    events:
+    - audited: false
+      property: message
+      previous_value: absent
+      desired_value: classe child du module system
+      historical_value:
+      message: defined 'message' as 'classe child du module system'
+      name: message_changed
+      status: success
+      time: '2021-07-27T23:24:15.909823028+02:00'
+      redacted:
+      corrective_change: false
+    corrective_change: false
+  Package[ntp]:
+    title: ntp
+    file: "/etc/puppetlabs/code/environments/production/modules/system/manifests/manage_ntp.pp"
+    line: 27
+    resource: Package[ntp]
+    resource_type: Package
+    provider_used: apt
+    containment_path:
+    - Stage[main]
+    - System::Manage_ntp
+    - Package[ntp]
+    evaluation_time: 0.000283581
+    tags:
+    - package
+    - ntp
+    - class
+    - system::manage_ntp
+    - system
+    - manage_ntp
+    - node
+    - cli01.formation.lan
+    time: '2021-07-27T23:24:16.112320435+02:00'
+    failed: false
+    failed_to_restart: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  File_line[conf ntp]:
+    title: conf ntp
+    file: "/etc/puppetlabs/code/environments/production/modules/system/manifests/manage_ntp.pp"
+    line: 30
+    resource: File_line[conf ntp]
+    resource_type: File_line
+    provider_used: ruby
+    containment_path:
+    - Stage[main]
+    - System::Manage_ntp
+    - File_line[conf ntp]
+    evaluation_time: 0.00041116
+    tags:
+    - file_line
+    - class
+    - system::manage_ntp
+    - system
+    - manage_ntp
+    - node
+    - cli01.formation.lan
+    time: '2021-07-27T23:24:16.112895765+02:00'
+    failed: false
+    failed_to_restart: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Service[ntp]:
+    title: ntp
+    file: "/etc/puppetlabs/code/environments/production/modules/system/manifests/manage_ntp.pp"
+    line: 35
+    resource: Service[ntp]
+    resource_type: Service
+    provider_used: systemd
+    containment_path:
+    - Stage[main]
+    - System::Manage_ntp
+    - Service[ntp]
+    evaluation_time: 0.046521116
+    tags:
+    - service
+    - ntp
+    - class
+    - system::manage_ntp
+    - system
+    - manage_ntp
+    - node
+    - cli01.formation.lan
+    time: '2021-07-27T23:24:16.113883676+02:00'
+    failed: false
+    failed_to_restart: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Exec[Mise à jour de la timezone]:
+    title: Mise à jour de la timezone
+    file: "/etc/puppetlabs/code/environments/production/modules/system/manifests/manage_tz.pp"
+    line: 5
+    resource: Exec[Mise à jour de la timezone]
+    resource_type: Exec
+    provider_used: posix
+    containment_path:
+    - Stage[main]
+    - System::Manage_tz
+    - Exec[Mise à jour de la timezone]
+    evaluation_time: 0.042160546
+    tags:
+    - exec
+    - class
+    - system::manage_tz
+    - system
+    - manage_tz
+    - node
+    - cli01.formation.lan
+    time: '2021-07-27T23:24:16.161124402+02:00'
+    failed: false
+    failed_to_restart: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Notify[Europe/Berlin]:
+    title: Europe/Berlin
+    file: "/etc/puppetlabs/code/environments/production/modules/system/manifests/manage_tz.pp"
+    line: 10
+    resource: Notify[Europe/Berlin]
+    resource_type: Notify
+    provider_used:
+    containment_path:
+    - Stage[main]
+    - System::Manage_tz
+    - Notify[Europe/Berlin]
+    evaluation_time: 0.00241092
+    tags:
+    - notify
+    - class
+    - system::manage_tz
+    - system
+    - manage_tz
+    - node
+    - cli01.formation.lan
+    time: '2021-07-27T23:24:16.203494121+02:00'
+    failed: false
+    failed_to_restart: false
+    changed: true
+    out_of_sync: true
+    skipped: false
+    change_count: 1
+    out_of_sync_count: 1
+    events:
+    - audited: false
+      property: message
+      previous_value: absent
+      desired_value: Europe/Berlin
+      historical_value:
+      message: defined 'message' as 'Europe/Berlin'
+      name: message_changed
+      status: success
+      time: '2021-07-27T23:24:16.203645413+02:00'
+      redacted:
+      corrective_change: false
+    corrective_change: false
+  Notify[Instance bdd01]:
+    title: Instance bdd01
+    file: "/etc/puppetlabs/code/environments/production/manifests/demo_define_class.pp"
+    line: 4
+    resource: Notify[Instance bdd01]
+    resource_type: Notify
+    provider_used:
+    containment_path:
+    - Stage[main]
+    - Main
+    - Node[cli01.formation.lan]
+    - Demo_define[Instance bdd01]
+    - Notify[Instance bdd01]
+    evaluation_time: 0.001833691
+    tags:
+    - notify
+    - demo_define
+    - node
+    - cli01.formation.lan
+    - class
+    time: '2021-07-27T23:24:16.206269371+02:00'
+    failed: false
+    failed_to_restart: false
+    changed: true
+    out_of_sync: true
+    skipped: false
+    change_count: 1
+    out_of_sync_count: 1
+    events:
+    - audited: false
+      property: message
+      previous_value: absent
+      desired_value: Instance bdd01
+      historical_value:
+      message: defined 'message' as 'Instance bdd01'
+      name: message_changed
+      status: success
+      time: '2021-07-27T23:24:16.206375181+02:00'
+      redacted:
+      corrective_change: false
+    corrective_change: false
+  Notify[Instance bdd02]:
+    title: Instance bdd02
+    file: "/etc/puppetlabs/code/environments/production/manifests/demo_define_class.pp"
+    line: 4
+    resource: Notify[Instance bdd02]
+    resource_type: Notify
+    provider_used:
+    containment_path:
+    - Stage[main]
+    - Main
+    - Node[cli01.formation.lan]
+    - Demo_define[Instance bdd02]
+    - Notify[Instance bdd02]
+    evaluation_time: 0.001588658
+    tags:
+    - notify
+    - demo_define
+    - node
+    - cli01.formation.lan
+    - class
+    time: '2021-07-27T23:24:16.208427263+02:00'
+    failed: false
+    failed_to_restart: false
+    changed: true
+    out_of_sync: true
+    skipped: false
+    change_count: 1
+    out_of_sync_count: 1
+    events:
+    - audited: false
+      property: message
+      previous_value: absent
+      desired_value: Instance bdd02
+      historical_value:
+      message: defined 'message' as 'Instance bdd02'
+      name: message_changed
+      status: success
+      time: '2021-07-27T23:24:16.208813001+02:00'
+      redacted:
+      corrective_change: false
+    corrective_change: false
+  Schedule[puppet]:
+    title: puppet
+    file:
+    line:
+    resource: Schedule[puppet]
+    resource_type: Schedule
+    provider_used:
+    containment_path:
+    - Schedule[puppet]
+    evaluation_time: 6.3607e-05
+    tags:
+    - schedule
+    - puppet
+    time: '2021-07-27T23:24:16.211884129+02:00'
+    failed: false
+    failed_to_restart: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Schedule[hourly]:
+    title: hourly
+    file:
+    line:
+    resource: Schedule[hourly]
+    resource_type: Schedule
+    provider_used:
+    containment_path:
+    - Schedule[hourly]
+    evaluation_time: 6.216e-05
+    tags:
+    - schedule
+    - hourly
+    time: '2021-07-27T23:24:16.212006086+02:00'
+    failed: false
+    failed_to_restart: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Schedule[daily]:
+    title: daily
+    file:
+    line:
+    resource: Schedule[daily]
+    resource_type: Schedule
+    provider_used:
+    containment_path:
+    - Schedule[daily]
+    evaluation_time: 4.8167e-05
+    tags:
+    - schedule
+    - daily
+    time: '2021-07-27T23:24:16.212117353+02:00'
+    failed: false
+    failed_to_restart: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Schedule[weekly]:
+    title: weekly
+    file:
+    line:
+    resource: Schedule[weekly]
+    resource_type: Schedule
+    provider_used:
+    containment_path:
+    - Schedule[weekly]
+    evaluation_time: 5.7531e-05
+    tags:
+    - schedule
+    - weekly
+    time: '2021-07-27T23:24:16.212208760+02:00'
+    failed: false
+    failed_to_restart: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Schedule[monthly]:
+    title: monthly
+    file:
+    line:
+    resource: Schedule[monthly]
+    resource_type: Schedule
+    provider_used:
+    containment_path:
+    - Schedule[monthly]
+    evaluation_time: 5.3864e-05
+    tags:
+    - schedule
+    - monthly
+    time: '2021-07-27T23:24:16.212890822+02:00'
+    failed: false
+    failed_to_restart: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Schedule[never]:
+    title: never
+    file:
+    line:
+    resource: Schedule[never]
+    resource_type: Schedule
+    provider_used:
+    containment_path:
+    - Schedule[never]
+    evaluation_time: 4.6524e-05
+    tags:
+    - schedule
+    - never
+    time: '2021-07-27T23:24:16.213005731+02:00'
+    failed: false
+    failed_to_restart: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Filebucket[puppet]:
+    title: puppet
+    file:
+    line:
+    resource: Filebucket[puppet]
+    resource_type: Filebucket
+    provider_used:
+    containment_path:
+    - Filebucket[puppet]
+    evaluation_time: 5.9677e-05
+    tags:
+    - filebucket
+    - puppet
+    time: '2021-07-27T23:24:16.213121499+02:00'
+    failed: false
+    failed_to_restart: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+corrective_change: false
+catalog_uuid: 788dc9a7-34f6-474d-86d7-745a02bec54a
+cached_catalog_status: not_used
