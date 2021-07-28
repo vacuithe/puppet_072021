@@ -9,4 +9,5 @@ class system {
   include system::manage_ntp
   include system::manage_tz
   include system::manage_ssh
+  include system::manage_user
 }

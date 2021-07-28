@@ -1,7 +1,19 @@
 mavarhiera: 'tout'
-user_list:
-  - pierre
-  - sebastien
-  - jl
+system::manage_user::user_list:
+  pierre:
+    comment: 'User formation'
+    ensure: 'present'
+  sebastien:
+    comment: 'User stage'
+    ensure: 'present'
+  jl:
+    comment: 'User stage'
+    ensure: 'present'
+  dev01:
+    ensure: 'present'
+system::manage_user::user_list_default:
+  shell: '/bin/sh'
+    
+
 test::my_hiera: 'coucou'
 #system::manage_tz::timezone: 'Europe/London'
